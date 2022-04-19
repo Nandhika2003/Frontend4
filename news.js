@@ -5,6 +5,7 @@ const data = async() => {
 
     for(i = 0; i<50; i++) {
         document.querySelector('.container').innerHTML += `<div class='element'>
+            <img class='img' src="${result.data[i].imageUrl}">
             <div class='title'>${result.data[i].title}</div>
             <div class='content'>${result.data[i].content}</div>
             <div class='end'>${result.data[i].author}</div>
@@ -13,7 +14,4 @@ const data = async() => {
     }  
 }
 
-function fun(){
-    document.querySelector('.container').innerHTML='';
-    data()
-}
+data()
